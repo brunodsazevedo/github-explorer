@@ -7,8 +7,14 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
+    mode: 'development',
     resolve: {
         extensions: ['.js', '.jsx'],
+    },
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'public')
+        }
     },
     plugins: [
         new HtmlWebpackPlugin({
